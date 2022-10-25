@@ -80,7 +80,7 @@ def run(command, desc=None):
         print(desc)
         sleep(2)
 
-    p = subprocess.run(command, text=True)
+    p = subprocess.run(command, text=True, shell=True)
 
     if p.returncode != 0:
         message = (
